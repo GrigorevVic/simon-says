@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid gray;
+  max-width: 800px;
+  border-radius: 50px;
+  padding-top: 10px;
+}
+
+.title, .modal-title {
+  font-size: 40px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.modal-title {
+  color: red;
+}
+
+.modal-message {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+
+.title2, .error-message {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.error-message {
+  color: red;
+}
+
+.correct-message {
+  color: rgb(13, 129, 38);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.levels {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
+.field {
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.char {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 1px;
+}
+
+.btn {
+  background: rgb(236, 226, 226);
+  width: 70px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 1px;
+}
+
+.level-active {
+  background: gray;
+  color: white;
+  cursor: default;
+}
+
+.keyboard {
+  display: flex;
+  max-width: 520px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.keyboard-btn {
+  display: flex;
+  width: 45px;
+  height: 45px;
+  margin: 3px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.keyboard-btn-active {
+  background-color: rgb(245, 239, 239);
+  color: rgb(8, 8, 8);
+}
+
+.btn-start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(236, 226, 226);
+  border: 1px solid rgb(97, 92, 92);
+  width: 150px;
+  height: 50px;
+  margin: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.hidden {
+  opacity: 0;
+  cursor: default;
+}
+
+.show {
+  opacity: 1;
+}
+
+.inactive {
+  opacity: 0.5;
+  cursor: default;
+}
+/* modal window */
+.modal-wrapper {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(240, 237, 237, 0.8);
+  z-index: 1;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: 400px;
+  background: rgb(109, 102, 102);
+  margin: 6px;
+  border-radius: 20px;
+}
+
+@media (hover: hover) {
+  .level:not([disabled]):hover {
+    background: gray;
+    color: white;
+    transition: 0.5s;
+  }
+  .btn:not([disabled]):hover {
+    background: gray;
+    color: white;
+    transition: 0.5s;
+  }
+}
